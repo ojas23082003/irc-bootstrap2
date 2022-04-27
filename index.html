@@ -46,6 +46,10 @@
             display: flex;
             justify-content: space-between;
         }
+
+        #iname, #ipass{
+            color: red;
+        }
         
         
     </style>
@@ -63,72 +67,79 @@
         <br>
         <hr>
         <br>
-        <div id="container">
-            <div class="inside">
-                <div class="inp">
-                    <label for="name"><b>Enter your name : </b></label><br>
-                    <input class="inputs" type="text" id="name" name="name" required placeholder="Name">
+        <form>
+            <div id="container">
+                <div class="inside">
+                    <div class="inp">
+                        <label for="name" id="ename"><b>Enter your name : </b></label><br>
+                        <input class="inputs" type="text" id="name" name="name" required placeholder="Name"><br>
+                        <b><h4 id="iname"></h4></b>
+                    </div>
+                    <div class="inp">
+                        <label for="mail"><b>Enter your email ID : </b></label><br>
+                        <input type="email" class="inputs" id="mail" name="mail" required placeholder="abc@gmail.com">
+                    </div>
+    
                 </div>
-                <div class="inp">
-                    <label for="mail"><b>Enter your email ID : </b></label><br>
-                    <input type="email" class="inputs" id="mail" name="mail" required placeholder="abc@gmail.com">
+    
+                
+                <div class="inside">
+                    <div class="inp">
+                        <label for="pwd" id="epwd"><b>Enter password</b></label><br>
+                        <input type="password" class="inputs" id="pwd" name="pwd" required placeholder="Password"><br>
+                        <b><h4 id="ipass"></h4></b>
+                    </div>
+                    <div class="inp">
+                        <label for="datalist"><b>Select your branch : </b></label><br>
+                        <input list="datalist" class="inputs" name="data" required placeholder="Branch Name">
+                        <datalist id="datalist">
+                            <option value="Industrial & Systems Engineering">Industrial & Systems Engineering</option>
+                            <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                            <option value="Chemical Engineering">Chemical Engineering</option>
+                            <option value="Civil Engineering">Civil Engineering</option>
+                            <option value="Aerospace Engineering">Aerospace Engineering</option>
+                            <option value="Metallurgy and Material Sciences">Metallurgy and Material Sciences</option>
+                            <option value="Electronics and Electrical Communication Engineering">Electronics and Electrical
+                                Communication Engineering</option>
+                        </datalist>
+                    </div>
                 </div>
-
+    
+                <div class="inside">
+                    <div class="inp">
+                        <label for="num"><b>Enter your phone number : </b></label><br>
+                        <input type="tel" class="inputs" id="num" pattern="[0-9]{10}" placeholder="1234567890" required>
+                    </div>
+                    <div class="inp">
+                        <label for="ach"><b>Attach your achievements (if any) : </b></label><br>
+                        <input type="file" id="ach" name="ach" class="inputs">
+                    </div>
+                </div>
+                
+    
+    
+                <div class="inp">
+                    <p style="font-size: 25px;"><b>Select your gender :</b></p><br>
+                    <input type="radio" value="Male" id="gend1" name="gend">
+                    <label for="gend1">Male</label><br>
+                    <input type="radio" value="Female" id="gend2" name="gend">
+                    <label for="gend2">Female</label><br>
+                    <input type="radio" value="Other" id="gend3" name="gend">
+                    <label for="gend3">Other</label><br>
+                </div>
             </div>
-
-            
-            <div class="inside">
-                <div class="inp">
-                    <label for="pwd"><b>Enter password</b></label><br>
-                    <input type="password" class="inputs" id="pwd" name="pwd" required placeholder="Password">
-                </div>
-                <div class="inp">
-                    <label for="datalist"><b>Select your branch : </b></label><br>
-                    <input list="datalist" class="inputs" name="data" required placeholder="Branch Name">
-                    <datalist id="datalist">
-                        <option value="Industrial & Systems Engineering">Industrial & Systems Engineering</option>
-                        <option value="Computer Science & Engineering">Computer Science & Engineering</option>
-                        <option value="Mechanical Engineering">Mechanical Engineering</option>
-                        <option value="Chemical Engineering">Chemical Engineering</option>
-                        <option value="Civil Engineering">Civil Engineering</option>
-                        <option value="Aerospace Engineering">Aerospace Engineering</option>
-                        <option value="Metallurgy and Material Sciences">Metallurgy and Material Sciences</option>
-                        <option value="Electronics and Electrical Communication Engineering">Electronics and Electrical
-                            Communication Engineering</option>
-                    </datalist>
-                </div>
+    
+            <br><hr><br>
+    
+            <div style="text-align: center;margin-top: 40px;">
+                <input type="submit" value="Submit" style="width: 50%;height: 40px;background-color: rgb(91, 246, 91);margin-bottom: 50px;" id="subit" onclick="call(event)">
             </div>
-
-            <div class="inside">
-                <div class="inp">
-                    <label for="num"><b>Enter your phone number : </b></label><br>
-                    <input type="tel" class="inputs" id="num" pattern="[0-9]{10}" placeholder="1234567890" required>
-                </div>
-                <div class="inp">
-                    <label for="ach"><b>Attach your achievements (if any) : </b></label><br>
-                    <input type="file" id="ach" name="ach" class="inputs">
-                </div>
-            </div>
-            
-
-
-            <div class="inp">
-                <p style="font-size: 25px;"><b>Select your gender :</b></p><br>
-                <input type="radio" value="Male" id="gend1" name="gend">
-                <label for="gend1">Male</label><br>
-                <input type="radio" value="Female" id="gend2" name="gend">
-                <label for="gend2">Female</label><br>
-                <input type="radio" value="Other" id="gend3" name="gend">
-                <label for="gend3">Other</label><br>
-            </div>
-        </div>
-
-        <br><hr><br>
-
-        <div style="text-align: center;margin-top: 40px;">
-            <input type="submit" value="Submit" style="width: 50%;height: 40px;background-color: rgb(91, 246, 91);margin-bottom: 50px;" id="subit">
-        </div>
+        </form>
+        
     </div>
 </body>
+
+<script src="javas.js"></script>
 
 </html>
